@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DramaSync — Editar perfil</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/edit-profile.js" defer></script>
+</head>
+
+<body>
+    <div class="mobile">
+        <div class="screen">
+
+            <header class="app-header">
+                <h1 class="app-logo">DramaSync</h1>
+
+                <a
+                    class="notification-button"
+                    href="notifications.html"
+                    aria-label="Notificações"
+                >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                        <path d="M10 21h4"/>
+                    </svg>
+                </a>
+            </header>
+
+            <main class="page-content edit-profile-page">
+                <div class="profile-avatar" aria-hidden="true">D</div>
+
+                <form class="profile-form">
+                    <div class="form-field">
+                        <label for="profile-name">Nome</label>
+                        <input
+                            id="profile-name"
+                            name="name"
+                            type="text"
+                            value="Debora"
+                            autocomplete="name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-field">
+                        <label for="profile-email">Email</label>
+                        <input
+                            id="profile-email"
+                            name="email"
+                            type="email"
+                            value="debora@example.com"
+                            readonly
+                            aria-describedby="email-help"
+                        >
+                        <p class="field-help" id="email-help">
+                            Seu email não pode ser editado.
+                        </p>
+                    </div>
+
+                    <button class="profile-action-button" type="submit">
+                        Salvar alterações
+                    </button>
+                </form>
+
+                <section class="account-section" aria-labelledby="password-title">
+                    <h2 id="password-title">Alterar senha</h2>
+
+                    <form class="password-form">
+                        <div class="form-field">
+                            <label class="sr-only" for="current-password">Senha atual</label>
+                            <input
+                                id="current-password"
+                                name="currentPassword"
+                                type="password"
+                                placeholder="Senha atual"
+                                autocomplete="current-password"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label class="sr-only" for="new-password">Nova senha</label>
+                            <input
+                                id="new-password"
+                                name="newPassword"
+                                type="password"
+                                placeholder="Nova senha"
+                                autocomplete="new-password"
+                                minlength="12"
+                                aria-describedby="password-help"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label class="sr-only" for="confirm-password">Repetir nova senha</label>
+                            <input
+                                id="confirm-password"
+                                name="confirmPassword"
+                                type="password"
+                                placeholder="Repetir nova senha"
+                                autocomplete="new-password"
+                                minlength="12"
+                                required
+                            >
+                        </div>
+
+                        <p class="field-help" id="password-help">
+                            Mínimo 12 cacacteres, conter maiúscula, caractere especial e número
+                        </p>
+
+                        <div class="password-actions">
+                            <button class="forgot-password-button" type="button">
+                                Esqueceu sua senha?
+                            </button>
+
+                            <button class="profile-action-button" type="submit">
+                                Salvar nova senha
+                            </button>
+                        </div>
+                    </form>
+                </section>
+
+                <section class="account-section" aria-labelledby="delete-title">
+                    <h2 id="delete-title">Deletar minha conta</h2>
+
+                    <button
+                        class="profile-action-button"
+                        type="button"
+                    >
+                        Deletar minha conta
+                    </button>
+
+                    <p class="field-help">
+                        Esta ação não pode ser desfeita.
+                    </p>
+
+                </section>
+
+                <p class="edit-feedback" role="status"></p>
+
+            </main>
+
+            <nav class="bottom-nav" aria-label="Navegação principal">
+                <a class="nav-item" href="index.html">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m3 10 9-7 9 7M5 9v12h14V9"/>
+                        <path d="M9 21v-8h6v8"/>
+                    </svg>
+                    <span>Início</span>
+                </a>
+
+                <a class="nav-item" href="library.html">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="5" width="13" height="14" rx="2"/>
+                        <path d="m16 10 5-3v10l-5-3"/>
+                    </svg>
+                    <span>Minhas séries</span>
+                </a>
+
+                <a class="nav-item" href="friends.html">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="7" r="3"/>
+                        <path d="M6 21v-3a6 6 0 0 1 12 0v3"/>
+                        <path d="M5 5a3 3 0 0 0 0 6M19 5a3 3 0 0 1 0 6"/>
+                        <path d="M2 20v-2a5 5 0 0 1 3-4M22 20v-2a5 5 0 0 0-3-4"/>
+                    </svg>
+                    <span>Amigos</span>
+                </a>
+
+                <a class="nav-item" href="profile.html" aria-current="page">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="7" r="4"/>
+                        <path d="M4 21v-2a8 8 0 0 1 16 0v2Z"/>
+                    </svg>
+                    <span>Perfil</span>
+                </a>
+            </nav>
+
+        </div>
+    </div>
+</body>
+</html>
